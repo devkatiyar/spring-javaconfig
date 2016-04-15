@@ -16,7 +16,6 @@ import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@PropertySource({ "classpath:datasource.properties" })
 @EnableTransactionManagement
 public class DataSourceConfiguration {
 	@Autowired

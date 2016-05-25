@@ -6,7 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@PropertySource(value={ "classpath:datasource.properties" })
+@PropertySource(value={ "classpath:datasource.properties" , "classpath:Test.properties"},ignoreResourceNotFound = true)
 public class PropertiesConfigurtion {
 
 	/*
@@ -16,7 +16,10 @@ public class PropertiesConfigurtion {
 	 */
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
-		return new PropertySourcesPlaceholderConfigurer();
+		PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer=new PropertySourcesPlaceholderConfigurer();
+		//propertySourcesPlaceholderConfigurer.setIgnoreUnresolvablePlaceholders(true);
+		
+		return propertySourcesPlaceholderConfigurer;
 	}
 
 }

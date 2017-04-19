@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: gs-batch
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Dev
+Implementation-Vendor-Id: spring-boot-batch
+Build-Jdk: 1.8.0_101
+Implementation-URL: http://projects.spring.io/spring-boot/gs-batch/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

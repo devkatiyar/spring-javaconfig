@@ -34,4 +34,10 @@ public class TraService implements ITradeService {
 		
 	}
 
+	@Override
+	public void insertProc(String employeeNo, String employeeType, String insId, int salary) {
+		tradeDao.insertProc(employeeNo, employeeType, insId, salary);
+		
+	}
+
 }

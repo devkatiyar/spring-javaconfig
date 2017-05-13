@@ -71,6 +71,22 @@ public class Controllers {
 		}
 		return "success";
 	}
+	
+	@RequestMapping(value = "/saveJdbcProc")
+	@ResponseBody
+	public String callJdbcStoredProc(String email) {
+		
+		System.out.println("Exceuting using JDBC Connection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		try {
+			//CALL INSERTEMP('103', 'MARGIN','APPLE',100,@OUT);
+			tradeServices.insertProc("103", "MARGIN", "TCS", 200);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return "Can Not loadTrade";
+		}
+		return "success";
+	}
+	
 
 	@RequestMapping(value = "/getTrade")
 	@ResponseBody

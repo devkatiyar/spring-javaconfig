@@ -23,7 +23,15 @@ public class Controllers {
 
 	@RequestMapping(value = "/saveJdbc")
 	@ResponseBody
+	@LogExecutionTime("test execution")
 	public String saveTradeUsingJdbc(String email) {
+		
+		try {
+			Thread.sleep(7000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println("Exceuting using JDBC Connection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		try {

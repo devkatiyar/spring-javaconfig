@@ -1,0 +1,11 @@
+com\entity\Trade.class
+com\dao\TradeDaoImpl$1.class
+com\dao\TradeDao.class
+com\dao\TradeDaoImpl.class
+com\services\ITradeService.class
+com\spring\JdbcDataSourceConfiguration.class
+com\spring\PropertiesConfiguration.class
+com\Application.class
+com\Controllers.class
+com\services\TraService.class
+com\LogDuration.class

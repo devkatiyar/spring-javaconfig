@@ -12,5 +12,7 @@ public interface ITradeService {
 	
 	void saveTradeUsingJdbc(Trade trade);
 	
+	void insertProc(String employeeNo, String employeeType, String insId, int salary);
+	
 
 }

@@ -1,11 +1,14 @@
 package com.myproject.dao;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -59,3 +62,19 @@ public class UserDAOImpl implements UserDAO {
 		return null;
 	}
 }
+
+/*
+jdbcTemplate.batchUpdate("call INSERTTRADE(?, ?)", new BatchPreparedStatementSetter() {
+@Override
+public void setValues(PreparedStatement ps, int i) throws SQLException {
+	System.out.println("batch size!!!!!!!!!!!!!111");
+    ps.setInt(1, Integer.parseInt(tradeList.get(i).getUnit()));
+    ps.setString(2, tradeList.get(i).getStock());
+}
+@Override
+public int getBatchSize() {
+    return tradeList.size();
+}
+})
+
+*/
